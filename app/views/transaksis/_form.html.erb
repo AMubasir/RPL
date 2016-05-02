@@ -1,0 +1,46 @@
+<%= form_for(@transaksi) do |f| %>
+  <% if @transaksi.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@transaksi.errors.count, "error") %> prohibited this transaksi from being saved:</h2>
+
+      <ul>
+      <% @transaksi.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+  <div class="field">
+    <%= f.label :pelanggan_id %><br>
+    <%= f.collection_select :pelanggan_id, Pelanggan.all, :id, :nama %>
+  </div>
+  <div class="field">
+    <%= f.label :jenis %><br>
+    <%= f.collection_select :id, JenisMobil.all, :id, :jenis %>
+  </div>
+  <div class="field">
+    <%= f.label :mobil_id %><br>
+    <%= f.grouped_collection_select :mobil_id, JenisMobil.all, :mobils, :jenis, :id, :nama %>
+  </div>
+  <div class="field">
+    <%= f.label :tanggal_sewa %><br>
+    <%= f.text_field :tanggal_sewa %>
+  </div>
+  <div class="field">
+    <%= f.label :tanggal_kembali %><br>
+    <%= f.text_field :tanggal_kembali %>
+  </div>
+  <div class="field">
+    <%= f.label :lama %><br>
+    <%= f.number_field :lama %>
+  </div>
+  <div class="field">
+    <%= f.label :uang_muka %><br>
+    <%= f.text_field :uang_muka %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

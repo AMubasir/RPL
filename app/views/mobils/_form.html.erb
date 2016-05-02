@@ -1,0 +1,42 @@
+<%= form_for(@mobil) do |f| %>
+  <% if @mobil.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mobil.errors.count, "error") %> prohibited this mobil from being saved:</h2>
+
+      <ul>
+      <% @mobil.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+  <div class="field">
+    <%= f.label :jenis_mobil_id %><br>
+    <%= f.collection_select :jenis_mobil_id, JenisMobil.all, :id, :jenis %>
+  </div>
+  <div class="field">
+    <%= f.label :nama %><br>
+    <%= f.text_field :nama %>
+  </div>
+  <div class="field">
+    <%= f.label :warna %><br>
+    <%= f.text_field :warna %>
+  </div>
+  <div class="field">
+    <%= f.label :no_polisi %><br>
+    <%= f.text_field :no_polisi %>
+  </div>
+  <div class="field">
+    <%= f.label :harga %><br>
+    <%= f.text_field :harga %>
+  </div>
+  <div class="field">
+    <%= f.label :keterangan %><br>
+    <%= f.check_box :keterangan %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

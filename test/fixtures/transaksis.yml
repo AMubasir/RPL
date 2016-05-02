@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tanggal_sewa: 2016-05-02
+  tanggal_kembali: 2016-05-02
+  lama: 1
+  uang_muka: 1.5
+  mobil_id: 
+  pelanggan_id: 
+
+two:
+  tanggal_sewa: 2016-05-02
+  tanggal_kembali: 2016-05-02
+  lama: 1
+  uang_muka: 1.5
+  mobil_id: 
+  pelanggan_id: 

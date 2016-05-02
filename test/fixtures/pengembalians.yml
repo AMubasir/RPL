@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  transaksi_id: 
+  telat: MyString
+  denda: MyString
+  keterangan: false
+
+two:
+  transaksi_id: 
+  telat: MyString
+  denda: MyString
+  keterangan: false

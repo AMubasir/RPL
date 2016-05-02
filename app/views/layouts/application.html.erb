@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RPL</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+	<%= link_to 'Data Pelanggan', pelanggans_path %>
+	<%= link_to 'Data Mobil', mobils_path %>
+	<%= link_to 'Laporan Peminjaman', transaksis_path %>
+	<%= link_to 'Form Pengembalian', pengembalians_path %>
+
+<body>
+
+<%= yield %>
+
+</body>
+</html>

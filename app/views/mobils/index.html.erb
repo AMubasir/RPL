@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Mobils</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Jenis mobil</th>
+      <th>Nama</th>
+      <th>Warna</th>
+      <th>No polisi</th>
+      <th>Harga</th>
+      <th>Keterangan</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mobils.each do |mobil| %>
+      <tr>
+        <td><%= mobil.jenis_mobil.jenis %></td>
+        <td><%= mobil.nama %></td>
+        <td><%= mobil.warna %></td>
+        <td><%= mobil.no_polisi %></td>
+        <td><%= mobil.harga %></td>
+        <td><%= status_converter(mobil.keterangan, thruty: 'Ada', falsey: 'Disewa') %></td>
+        <td><%= link_to 'Show', mobil %></td>
+        <td><%= link_to 'Edit', edit_mobil_path(mobil) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mobil', new_mobil_path %>

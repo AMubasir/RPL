@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Jenis mobil:</strong>
+  <%= @mobil.jenis_mobil.jenis %>
+</p>
+
+<p>
+  <strong>Nama:</strong>
+  <%= @mobil.nama %>
+</p>
+
+<p>
+  <strong>Warna:</strong>
+  <%= @mobil.warna %>
+</p>
+
+<p>
+  <strong>No polisi:</strong>
+  <%= @mobil.no_polisi %>
+</p>
+
+<p>
+  <strong>Harga:</strong>
+  <%= @mobil.harga %>
+</p>
+
+<p>
+  <strong>Keterangan:</strong>
+  <%= status_converter(@mobil.keterangan) %>
+</p>
+
+<%= link_to 'Edit', edit_mobil_path(@mobil) %> |
+<%= link_to 'Back', mobils_path %>

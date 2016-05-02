@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Pengembalians</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Transaksi</th>
+      <th>Telat</th>
+      <th>Denda</th>
+      <th>Keterangan</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pengembalians.each do |pengembalian| %>
+      <tr>
+        <td><%= pengembalian.transaksi %></td>
+        <td><%= pengembalian.telat %></td>
+        <td><%= pengembalian.denda %></td>
+        <td><%= pengembalian.keterangan %></td>
+        <td><%= link_to 'Show', pengembalian %></td>
+        <td><%= link_to 'Edit', edit_pengembalian_path(pengembalian) %></td>
+        <td><%= link_to 'Destroy', pengembalian, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pengembalian', new_pengembalian_path %>

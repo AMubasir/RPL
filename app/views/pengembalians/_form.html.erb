@@ -1,0 +1,33 @@
+<%= form_for(@pengembalian) do |f| %>
+  <% if @pengembalian.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pengembalian.errors.count, "error") %> prohibited this pengembalian from being saved:</h2>
+
+      <ul>
+      <% @pengembalian.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :transaksi_id, 'Masukan ID/ Nomor Transaksi' %><br>
+    <%= f.text_field :transaksi_id %>
+  </div>
+  <div class="field">
+    <%= f.label :telat %><br>
+    <%= f.text_field :telat %>
+  </div>
+  <div class="field">
+    <%= f.label :denda %><br>
+    <%= f.text_field :denda %>
+  </div>
+  <div class="field">
+    <%= f.label :keterangan %><br>
+    <%= f.check_box :keterangan %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

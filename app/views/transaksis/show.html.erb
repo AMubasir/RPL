@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pelanggan:</strong>
+  <%= @transaksi.pelanggan.nama %>
+</p>
+
+<p>
+  <strong>Jenis Mobil:</strong>
+  <%= @transaksi.mobil.jenis_mobil.jenis %>
+</p>
+
+<p>
+  <strong>Nama Mobil:</strong>
+  <%= @transaksi.mobil.nama %>
+</p>
+
+<p>
+  <strong>Tanggal sewa:</strong>
+  <%= @transaksi.tanggal_sewa %>
+</p>
+
+<p>
+  <strong>Tanggal kembali:</strong>
+  <%= @transaksi.tanggal_kembali %>
+</p>
+
+<p>
+  <strong>Lama:</strong>
+  <%= @transaksi.lama %>
+</p>
+
+<p>
+  <strong>Total Bayar:</strong>
+  <%= total_bayar = @transaksi.mobil.harga * @transaksi.lama %>
+</p>
+
+<p>
+  <strong>Uang muka:</strong>
+  <%= @transaksi.uang_muka %>
+</p>
+
+<p>
+  <strong>Sisa Bayar:</strong>
+  <%= sisa_bayar = total_bayar - @transaksi.uang_muka %>
+</p>
+
+<%= link_to 'Edit', edit_transaksi_path(@transaksi) %> |
+<%= link_to 'Back', transaksis_path %>

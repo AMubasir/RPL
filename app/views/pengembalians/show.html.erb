@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Transaksi:</strong>
+  <%= @pengembalian.transaksi %>
+</p>
+
+<p>
+  <strong>Telat:</strong>
+  <%= @pengembalian.telat %>
+</p>
+
+<p>
+  <strong>Denda:</strong>
+  <%= @pengembalian.denda %>
+</p>
+
+<p>
+  <strong>Keterangan:</strong>
+  <%= @pengembalian.keterangan %>
+</p>
+
+<%= link_to 'Edit', edit_pengembalian_path(@pengembalian) %> |
+<%= link_to 'Back', pengembalians_path %>
